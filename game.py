@@ -39,7 +39,7 @@ def guess(game, alphabet):
     if alphabet in game['actual_word']:
         for i in range(len(game['actual_word'])):
             if game["actual_word"][i] == alphabet:
-                game["masked_word"] = alphabet
+                game["masked_word"] = game["masked_word"][:i] + alphabet + game["masked_word"][i+1:]
     else:
         if game["number_of_suggest"] > 1:
             game["number_of_suggest"] -= 1
