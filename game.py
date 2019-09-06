@@ -42,7 +42,6 @@ def guess(game, alphabet):
                 game["masked_word"] = alphabet
     else:
         if game["number_of_suggest"] > 1:
-            print(f"Incorrect guess. You can guess it. :)\n")
             game["number_of_suggest"] -= 1
         else:
             raise GameLossException
